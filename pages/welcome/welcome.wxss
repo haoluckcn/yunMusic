@@ -1,0 +1,33 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:100vh;  
+  background: #DC4238;
+  text-align: center;
+}
+
+.contaner_images{
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+.logo{
+  width:100%;
+  height: 100%;
+}
+
+.sayHi{
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color:white;
+}

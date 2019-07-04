@@ -1,0 +1,8 @@
+<view class="container">
+  <view class='contaner_images'>
+    <image src="../../images/logo.png" class="logo"></image>
+  </view>
+  <view class="sayHi">
+    <text>{{sayHi}}</text>
+  </view>
+</view>

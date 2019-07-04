@@ -1,0 +1,12 @@
+
+.sign{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #ffffff;
+  background-color: #dc4238;
+}
+.hidden_btn{
+  display: none;
+}
