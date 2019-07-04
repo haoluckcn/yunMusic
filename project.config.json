@@ -22,7 +22,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.5.0",
 	"appid": "wx974090a10289f985",
-	"projectname": "%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90",
+	"projectname": "yunMusic",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
