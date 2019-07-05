@@ -25,7 +25,8 @@ Component({
         text: "我的"
       }]
   },
-
+  attached() {
+  },
   methods: {
     switchTab_index:function(){
       wx.switchTab({

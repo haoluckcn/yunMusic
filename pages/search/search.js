@@ -1,4 +1,4 @@
-const API = require('../../API/api.js');
+const API = require('../../wxapi/api.js');
 Page({
   data: {
     hotsongs: [], // 获取热门搜索

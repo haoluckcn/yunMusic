@@ -1,12 +1,109 @@
-
-.sign{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: #ffffff;
-  background-color: #dc4238;
+/* 我的 */
+.container {
+  padding: 40rpx;
 }
-.hidden_btn{
+
+.hidden_view {
+  display: none !important;
+}
+
+.show_view {
+  display: block;
+}
+
+.user {
+  text-align: center;
+  font-size: 14px;
+}
+
+.userLogin {
+  margin: 20rpx 0;
+}
+
+.userLogin .login_btn {
+  background: white;
+  border: 1rpx solid #ccc;
+  border-radius: 40rpx;
+  font-size: 14px;
+  margin-top: 10rpx;
+}
+
+.userLogin .login_btn::after {
   display: none;
+}
+
+.userinfo {
+  position: relative;
+  width: 100%;
+  height: 320rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo .background_img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300%;
+  height: 80%;
+  filter: blur(35px);
+  z-index: -1;
+  transform: scale(1.5);
+}
+
+
+.userinfo-avatar {
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.vip {
+  background: black;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.vip .vip_label {
+  position: relative;
+}
+
+.vip .vip_label::after {
+  content: '';
+  position: absolute;
+  right: -30rpx;
+  top: 10rpx;
+  height: 80%;
+  border: 1rpx solid #999;
+}
+
+.vip .vip_label .card {
+  color: rgb(228, 198, 144);
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.vip .vip_label .money {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.vip .vip_cont {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }

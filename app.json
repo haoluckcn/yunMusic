@@ -3,9 +3,10 @@
     "pages/welcome/welcome",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/love/love",
     "pages/me/me",
-    "pages/search/search"
+    "pages/love/love",
+    "pages/search/search",
+    "pages/authorize/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#DC4238",
@@ -22,14 +23,12 @@
     "selectedColor": "#DC4238",
     "backgroundColor": "#ffffff",
     "borderStyle": "black",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
-        "text": "乐库",
-        "iconPath": "images/music.png",
-        "selectedIconPath": "images/selected-music.png"
-      },
-      {
+        "text": "发现",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/selected-me.png"
+      }, {
         "pagePath": "pages/love/love",
         "text": "收藏",
         "iconPath": "images/love.png",

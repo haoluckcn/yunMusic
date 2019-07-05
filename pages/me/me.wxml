@@ -1,16 +1,25 @@
-<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="{{hidden ? 'sign' : 'hidden_btn'}}">登录</button>
-<view class="{{hidden ? 'hidden_btn' : 'head'}}">
-  <image src="{{img}}" class="background_img"></image>
-  <view class="image_box">
-    <image src="{{img}}" class="image"></image>
+<view class="container" hover-class="none" hover-stop-propagation="false">
+  <view class="user">
+    <view class="{{userConnect ? 'show_view' : 'hidden_view'}} userLogin">
+      <view class="tips">登录网易云音乐</view>
+      <view class="tips">手机电脑多端同步，尽享海量高品质音乐</view>
+      <button class="login_btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+        立即登录
+      </button>
+    </view>
+    <view class="{{!userConnect ? 'show_view' : 'hidden_view'}} userinfo">
+      <open-data type="userAvatarUrl" class="background_img"></open-data>
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </view>
   </view>
-  <view class="nickName_box">
-    <text class="nickName">{{nickName}}</text>
-  </view>
-</view>
-<view class="{{hidden ? 'hidden_btn' : 'body'}}">
-  <view><text class="title history">播放历史</text></view>
-  <view class="hot_keys_box_item" wx:for="{{history}}" wx:key="index">
-    {{item.songName}}
+  <view class="vip" bindtap="onQuestion">
+    <view class="vip_label">
+      <view class="card">开通黑胶VIP</view>
+      <view class="money">新客仅5元</view>
+    </view>
+    <view class="vip_cont">享超12项豪华特权</view>
   </view>
 </view>

@@ -1,5 +1,5 @@
 //index.js
-const API = require('../../API/api');
+const API = require('../../wxapi/api');
 const app = getApp();
 const change = require('../../utils/util');
 let half;

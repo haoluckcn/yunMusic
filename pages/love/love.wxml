@@ -1,3 +1,4 @@
 <view class="container">
-收藏
+  <view class="">你好我是第一</view>
+  <view class="">你好我是第二</view>
 </view>

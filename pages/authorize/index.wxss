@@ -1,0 +1,23 @@
+
+.sign{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  color: #333;
+  text-align: center;
+}
+.permission{
+  width:250rpx;
+  height: 150rpx;
+}
+text{
+  display: block;
+  font-size: 14px;
+  padding: 30rpx 0 100rpx;
+}
+button{
+  color: #fff;
+  background-color: #dc4238;
+}
