@@ -1,4 +1,9 @@
 <view class="container">
-  <view class="">你好我是第一</view>
-  <view class="">你好我是第二</view>
+  <image src="{{song.al.picUrl}}" class="background_img"></image>
+  <view class="body">
+    <view class="sing-brief">{{song.name}}</view>
+    <view class="singer-name">
+      <text class="singer-name-text" wx:for="{{song.ar}}" wx:key="{{index}}">{{item.name}}</text>
+    </view>
+  </view>
 </view>

@@ -6,7 +6,8 @@
     "pages/me/me",
     "pages/love/love",
     "pages/search/search",
-    "pages/authorize/index"
+    "pages/authorize/index",
+    "play/play"
   ],
   "window": {
     "navigationBarBackgroundColor": "#DC4238",

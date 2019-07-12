@@ -33,7 +33,8 @@
       <!-- 个性推荐里面的轮播图 -->
       <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorcolor}}" indicator-active-color="{{indicatoractivecolor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
         <block wx:for="{{banner}}" wx:key="">
-          <swiper-item class="swiper_item" data-id="{{item.targetId}}" bindtap='handlePlayAudio'> <!--点击之后获取到歌曲的ID存放到data-id -->
+          <swiper-item class="swiper_item" data-id="{{item.targetId}}" bindtap='handlePlayAudio'>
+            <!-- 点击之后获取到歌曲的ID存放到data-id -->
             <image src='{{item.imageUrl}}' class='banner' />
           </swiper-item>
         </block>
@@ -66,7 +67,7 @@
         <text class='comment_text'>榜单排行</text>
       </view>
     </view>
-       <!-- 最新音乐 -->
+    <!-- 最新音乐 -->
     <view class='songsheet_items_allbox newsong_allbox'>
       <text class='songsheet_container_title' bindtap="go_newsong">最新音乐</text>
       <view class='title_leader_box' bindtap="go_newsong">
@@ -93,8 +94,6 @@
         </view>
       </view>
     </view>
- 
-
     <!-- 推荐MV -->
     <view class='songsheet_items_allbox newsong_allbox'>
       <text class='songsheet_container_title' bindtap="go_mv">推荐MV</text>
@@ -109,14 +108,14 @@
         </view>
       </view>
     </view>
-        <!-- 精选电台 -->
+    <!-- 精选电台 -->
     <view class='songsheet_items_allbox dj_allbox'>
       <text class='songsheet_container_title' bindtap="go_dj">精选电台</text>
       <view class='title_leader_box' bindtap="go_dj">
         <image src='/images/dayuhao.png' class='title_leader'></image>
       </view>
       <view class='songsheet_items_box'>
-        <view wx:for="{{dj_index}}" wx:key="" class='songsheet_item_box'  bindtap='handlePlayDj'>
+        <view wx:for="{{dj_index}}" wx:key="" class='songsheet_item_box' bindtap='handlePlayDj'>
           <image src='{{item.picUrl}}' class="songsheet_container_image"></image>
           <text class='songsheet_container_text'>{{item.name}}</text>
         </view>
@@ -179,7 +178,7 @@
     <!-- 创作|翻唱 -->
     <view class='songsheet_items_allbox newsong_allbox'>
       <text class='songsheet_container_title'>创作|翻唱</text>
-      <view class="changechange_box" bindtap="change_1" >
+      <view class="changechange_box" bindtap="change_1">
         <image src="../../images/changechange.png" class="title_leader changechange"></image>
         <text class="changechangetext">换一换</text>
       </view>
