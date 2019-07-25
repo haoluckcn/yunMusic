@@ -7,7 +7,8 @@
     "pages/love/love",
     "pages/search/search",
     "pages/authorize/index",
-    "play/play"
+    "play/play",
+    "play/play_mv"
   ],
   "window": {
     "navigationBarBackgroundColor": "#DC4238",
@@ -31,7 +32,7 @@
         "selectedIconPath": "images/selected-me.png"
       }, {
         "pagePath": "pages/love/love",
-        "text": "收藏",
+        "text": "音乐",
         "iconPath": "images/love.png",
         "selectedIconPath": "images/selected-love.png"
       },

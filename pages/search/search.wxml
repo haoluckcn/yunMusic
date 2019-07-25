@@ -1,0 +1,52 @@
+<view class="searchPage">
+  <!-- 搜索框 -->
+  <view class="page__bd">
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"  color='#EDA8A3'></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入歌手或歌曲名" placeholder-style="color:#EDA8A3" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindblur="inputBlur" bindconfirm="searchOver" />
+                    <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                        <icon type="clear" size="14" color='#EDA8A3'></icon>
+                    </view>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                    <icon class="weui-icon-search" type="search" size="14" color='#EDA8A3'></icon>
+                    <view class="weui-search-bar__text">搜索</view>
+                </label>
+            </view>
+            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+        <!-- 热门搜索 -->
+        <view class="{{showView?'hot_keys':'header_view_hide'}}">
+          <view class="title">热门搜索</view>
+          <view class="hot_key_box">
+            <view wx:for="{{hotsongs}}" wx:key="">
+              <view class="hot_keys_box_item" data-value="{{item.first}}" bindtap="fill_value">{{item.first}}</view>
+            </view>
+          </view>
+        </view>
+        <!-- 搜索历史 -->
+        <view class="{{showView?'option':'header_view_hide'}}">
+          <text class="title history">搜索历史</text>
+          <icon type="clear" wx:if="{{history.length > 0}}" class="title record" bindtap="clearHistory" color="#DE655C"></icon>
+          <view class="hot_key_box">
+            <text class="hot_keys_box_item" wx:for="{{history}}" wx:key="" data-value="{{item}}" data-index="{{index}}" bindtap="fill_value">{{item}}</text>
+          </view>
+        </view>
+        <!-- 搜索建议 -->
+        <view class="{{showsongresult?'search_suggest':'header_view_hide'}}">
+          <text class="search_result" wx:for="{{searchsuggest}}" wx:key="" data-value='{{item.keyword}}' bindtap='fill_value'>{{item.keyword}}</text>
+        </view>
+          
+        <!-- 搜索结果 -->
+        <view class="weui-cells searchbar-result" wx:if="{{searchresult.length > 0}}">
+            <navigator wx:for="{{searchresult}}" wx:key="" data-id="{{item.id}}" url="/play/play?id={{item.id}}" class="weui-cell" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">
+                    <view>{{item.name}}</view>
+                    <view class='search_result_song_song_art-album'>{{item.artists[0].name}} - {{item.album.name}}</view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</view>
